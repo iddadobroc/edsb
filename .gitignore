@@ -1,3 +1,8 @@
+
+# gitignore template from
+# https://github.com/github/gitignore/blob/main/Python.gitignore
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -47,6 +52,7 @@ nosetests.xml
 coverage.xml
 *.cover
 *.py.cover
+*.lcov
 .hypothesis/
 .pytest_cache/
 cover/
@@ -122,13 +128,14 @@ ipython_config.py
 # pixi.lock
 #   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
 #   in the .venv directory. It is recommended not to include this directory in version control.
-.pixi
+.pixi/*
+!.pixi/config.toml
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
-celerybeat-schedule
+celerybeat-schedule*
 celerybeat.pid
 
 # Redis
@@ -195,10 +202,10 @@ cython_debug/
 .abstra/
 
 # Visual Studio Code
-#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#   and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#   you could uncomment the following to ignore the entire vscode folder
+#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore that
+#   can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+#   and can be added to the global gitignore or merged into this file. However, if you prefer, you
+#   could uncomment the following to ignore the entire vscode folder
 # .vscode/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
@@ -216,3 +223,34 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ----------------------------------------------------------------------
+# THIS PROJECT. Everything above is the standard Python list from GitHub.
+# ----------------------------------------------------------------------
+
+# Data. Too big for GitHub, and often not ours to publish.
+#    "data/raw/*" ignores every file inside the folder.
+#    "!data/raw/.gitkeep" makes one exception, so the empty folder stays in Git.
+#    Careful: writing "data/raw/" (the whole folder) would make the exception fail.
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/.gitkeep
+
+# Reports. The ones YOU WRITE (problem statement, data audit, AI usage log) live in
+# reports/ and ARE tracked: they are your work. Only what the CODE writes is ignored.
+reports/generated/*
+!reports/generated/.gitkeep
+
+# Trained models. Large files the code can rebuild.
+models/*
+!models/.gitkeep
+
+# macOS leftovers.
+.DS_Store
+
+# Stage 5 of the class: you add one line here yourself.
