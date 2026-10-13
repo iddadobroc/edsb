@@ -1,0 +1,16 @@
+date,model,dataset,accuracy,balanced_accuracy,precision,recall,f1,roc_auc,pr_auc,log_loss,brier,note
+2026-10-13,Baseline (base rate),train,0.838,0.5,0.0,0.0,0.0,0.5,0.162,0.443,0.136,
+2026-10-13,Baseline (base rate),validation,0.818,0.5,0.0,0.0,0.0,0.5,0.182,0.477,0.15,
+2026-10-13,Logistic regression,train,0.854,0.597,0.645,0.217,0.324,0.781,0.456,0.366,0.112,
+2026-10-13,Logistic regression,validation,0.82,0.549,0.532,0.122,0.198,0.746,0.4,0.423,0.132,
+2026-10-13,Decision tree (depth 5),train,0.851,0.591,0.628,0.205,0.309,0.764,0.427,0.371,0.113,
+2026-10-13,Decision tree (depth 5),validation,0.814,0.538,0.455,0.103,0.168,0.7,0.337,0.462,0.139,
+2026-10-13,Random forest (100 trees),train,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.094,0.016,
+2026-10-13,Random forest (100 trees),validation,0.822,0.548,0.552,0.117,0.193,0.737,0.393,0.423,0.132,
+2026-10-13,Gradient boosting,train,0.876,0.653,0.785,0.324,0.458,0.888,0.661,0.298,0.09,
+2026-10-13,Gradient boosting,validation,0.821,0.558,0.536,0.143,0.226,0.746,0.398,0.423,0.132,
+2026-10-13,k-nearest neighbors (k=25),train,0.851,0.559,0.73,0.126,0.215,0.816,0.469,0.348,0.109,
+2026-10-13,k-nearest neighbors (k=25),validation,0.819,0.523,0.547,0.057,0.103,0.712,0.361,0.646,0.137,
+2026-10-13,Decision tree (no depth limit),train,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,
+2026-10-13,Decision tree (no depth limit),validation,0.752,0.575,0.311,0.296,0.304,0.575,0.221,8.941,0.248,
+2026-10-13,Gradient boosting,test,0.858,0.592,0.661,0.204,0.312,0.784,0.461,0.358,0.108,test opened once

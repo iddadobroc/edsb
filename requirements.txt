@@ -38,3 +38,4 @@ jupyter
 ipykernel
 jupytext
 black
+plotly
